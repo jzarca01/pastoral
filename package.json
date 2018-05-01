@@ -1,0 +1,52 @@
+{
+  "name": "pastoral",
+  "version": "1.0.0",
+  "description": "An email sending service",
+  "main": "index.js",
+  "scripts": {
+    "babel-node": "babel-node",
+    "dev":
+      "cross-env NODE_ENV=development cross-env PORT=8080 nodemon --exec yarn babel-node -- ./bin/api.js",
+    "start":
+      "cross-env NODE_ENV=product cross-env PORT=8080 babel-node ./bin/api.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narative/pastoral.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/narative/pastoral/issues"
+  },
+  "homepage": "https://github.com/narative/pastoral#readme",
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.46",
+    "@sendgrid/mail": "^6.2.1",
+    "babel-core": "^6.26.3",
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "html-to-text": "^4.0.0",
+    "moment": "^2.22.1",
+    "morgan": "^1.9.0",
+    "oy-vey": "^0.11.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "sanitize-html": "^1.18.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "cross-env": "^5.1.4",
+    "nodemon": "^1.17.3"
+  }
+}

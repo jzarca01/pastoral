@@ -1,3 +1,6 @@
+# Sendgrid
+sendgrid.env
+
 # Logs
 logs
 *.log
