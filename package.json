@@ -36,9 +36,7 @@
     "oy-vey": "^0.11.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "sanitize-html": "^1.18.2"
-  },
-  "devDependencies": {
+    "sanitize-html": "^1.18.2",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
