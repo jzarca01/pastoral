@@ -8,7 +8,7 @@
     "dev":
       "cross-env NODE_ENV=development cross-env PORT=8080 nodemon --exec yarn babel-node -- ./bin/api.js",
     "start":
-      "cross-env NODE_ENV=product cross-env PORT=8080 babel-node ./bin/api.js"
+      "cross-env NODE_ENV=production cross-env PORT=8080 babel-node ./bin/api.js"
   },
   "repository": {
     "type": "git",
