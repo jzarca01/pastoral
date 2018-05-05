@@ -59,7 +59,7 @@ export function internalSendMail(options) {
 
     const message = {
       from: `${data.name} <${data.email}>`,
-      to: 'dennis@narative.co',
+      to: 'info@narative.co',
       subject,
       text: internalText,
       html: internalHtml
