@@ -5,6 +5,7 @@ import compression from 'compression';
 import morgan from 'morgan';
 import path from 'path';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 import routes from './routes';
 import utils from './utils/';
@@ -13,6 +14,7 @@ import utils from './utils/';
 dotenv.config();
 
 const app = new express();
+app.use(cors());
 app.set('trust proxy', 1);
 
 // General server config such as cookies, body, favicon, public, session

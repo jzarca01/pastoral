@@ -6,9 +6,10 @@ import EmptySpace from './EmptySpace';
 export default props => {
   const textStyle = {
     backgroundColor: '#fff',
-    fontFamily: '"Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif',
+    fontFamily:
+      '"futura-pt","Roboto","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif',
     fontSize: '18px',
-    padding: '50px 30px 35px 35px',
+    padding: '30px 30px 35px 35px'
   };
 
   return (
@@ -25,7 +26,7 @@ export default props => {
           <TD valign="top" style={textStyle}>
             <EmptySpace height={10} />
             {props.children}
-            <EmptySpace height={50} />
+            <EmptySpace height={30} />
           </TD>
         </TR>
       </TBody>

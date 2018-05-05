@@ -3,7 +3,8 @@ import React from 'react';
 export default props => {
   const buttonStyle = {
     margin: '0',
-    fontFamily: '"Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif',
+    fontFamily:
+      '"futura-pt","Roboto","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif',
     display: 'block',
     padding: '10px 16px',
     textDecoration: 'none',
@@ -17,7 +18,7 @@ export default props => {
     background: '#000',
     borderColor: '#000',
     color: '#fff',
-    borderTopWidth: '1px',
+    borderTopWidth: '1px'
   };
 
   return (

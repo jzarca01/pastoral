@@ -16,6 +16,9 @@ export default ({ data }) => (
         Thank you for contacting Narative. We have received your project
         proposal and will get back to you within 24 hours.
       </EmailRow>
+      <EmailRow>
+        <EmailButton link="https://narative.co" text="Narative" />
+      </EmailRow>
     </Body>
   </Layout>
 );

@@ -5,22 +5,23 @@ import EmptySpace from './EmptySpace';
 
 const Footer = props => {
   const tableStyle = {
-    maxWidth: '640px',
-    width: '640px',
+    maxWidth: '600px',
+    width: '530px',
     WebkitTextSizeAdjust: '100%',
     msTextSizeAdjust: '100%',
     msoTableLspace: '0pt',
     msoTableRspace: '0pt',
     borderCollapse: 'collapse',
-    margin: '0px auto',
+    margin: '0px auto'
   };
 
   const tdStyles = {
     backgroundColor: '#fff',
-    fontFamily: '"Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif',
+    fontFamily:
+      '"futura-pt","Roboto", Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif',
     padding: '0 30px 35px 35px',
     textAlign: 'center',
-    lineHeight: '16px',
+    lineHeight: '16px'
   };
 
   const innerStyles = {
@@ -28,7 +29,7 @@ const Footer = props => {
     color: '#111216',
     fontSize: '12px',
     textAlign: 'center',
-    paddingTop: '20px',
+    padding: '20px 30px 35px 35px'
   };
 
   return (
@@ -41,7 +42,7 @@ const Footer = props => {
         msoTableRspace: '0pt',
         borderCollapse: 'collapse',
         margin: '0px auto',
-        background: '#fff',
+        background: '#fff'
       }}
       border="0"
       cellPadding="0"
@@ -60,7 +61,7 @@ const Footer = props => {
               cellSpacing="0"
               border="0"
               style={tableStyle}
-              width="640"
+              width="600"
             >
               <TBody>
                 <TR>
@@ -74,7 +75,7 @@ const Footer = props => {
                           msoTableLspace: '0pt',
                           msoTableRspace: '0pt',
                           borderCollapse: 'collapse',
-                          margin: '0px auto',
+                          margin: '0px auto'
                         }}
                         cellPadding="0"
                         cellSpacing="0"
@@ -85,9 +86,49 @@ const Footer = props => {
                           <TR>
                             <TD style={innerStyles}>
                               <div>
-                                This email was sent by: Narative 123 Rue Saint
-                                Laurent, Montreal, Canada
+                                Sent by{' '}
+                                <a
+                                  style={{
+                                    color: '#8e8e8e'
+                                  }}
+                                  target="_blank"
+                                  href="https://narative.co"
+                                >
+                                  Narative
+                                </a>{' '}
+                                · 123 Rue Saint Laurent, 5th floor, Montreal, QC
+                                H2W 1Y1
                               </div>
+                              <Table
+                                width="100%"
+                                height="60"
+                                color={props.color}
+                              >
+                                <TBody>
+                                  <TR>
+                                    <TD>
+                                      <Table width="100%">
+                                        <TBody>
+                                          <TR>
+                                            <TD
+                                              align="center"
+                                              style={{
+                                                color: props.color
+                                              }}
+                                            >
+                                              <img
+                                                src="http://res.cloudinary.com/narative/image/upload/v1525489184/narative-logo-black.jpg"
+                                                width="100px"
+                                                alt="Narative logo"
+                                              />
+                                            </TD>
+                                          </TR>
+                                        </TBody>
+                                      </Table>
+                                    </TD>
+                                  </TR>
+                                </TBody>
+                              </Table>
                             </TD>
                           </TR>
                         </TBody>

@@ -13,7 +13,7 @@ export default props => (
         msoTableRspace: '0pt',
         borderCollapse: 'collapse',
         margin: '0px auto',
-        background: '#fff',
+        background: '#fff'
       }}
       border="0"
       cellPadding="0"
@@ -24,7 +24,6 @@ export default props => (
       <TBody>
         <TR>
           <TD>
-            {/* Centered column */}
             <Table
               className="widthFull-"
               style={{
@@ -34,9 +33,9 @@ export default props => (
                 msoTableRspace: '0pt',
                 borderCollapse: 'collapse',
                 margin: '0px auto',
-                maxWidth: '640px',
+                maxWidth: '600px'
               }}
-              width="640"
+              width="600"
               cellPadding="0"
               cellSpacing="0"
               border="0"
@@ -52,9 +51,8 @@ export default props => (
         <Footer />
         <TR>
           <TD>
-            {/* We don't care to run validation on this img tag, so leave as is. */}
             <img
-              src="https://example.com/tracker"
+              src="https://narative.co/tracker"
               height="1"
               style={{ display: 'block', height: '1px', width: '1px' }}
             />
