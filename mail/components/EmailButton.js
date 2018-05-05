@@ -16,8 +16,8 @@ export default props => {
     whiteSpace: 'nowrap',
     background: '#000',
     borderColor: '#000',
-    color: '#000',
-    borderTopWidth: '1px'
+    color: '#fff',
+    borderTopWidth: '1px',
   };
 
   return (

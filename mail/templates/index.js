@@ -1,13 +1,7 @@
-import CompanyInvite from './CompanyInvite';
-import Contact from './Contact';
-import PasswordReset from './PasswordReset';
-import PaymentConfirmation from './PaymentConfirmation';
-import Registration from './Registration';
+import ExternalContact from './external/ExternalContact';
+import ExternalContactPhone from './external/ExternalContactPhone';
 
 export default {
-  CompanyInvite,
-  Contact,
-  PasswordReset,
-  PaymentConfirmation,
-  Registration
+  ExternalContact,
+  ExternalContactPhone,
 };
