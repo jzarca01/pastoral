@@ -4,116 +4,99 @@ import { Table, TBody, TR, TD, A } from 'oy-vey';
 import EmptySpace from './EmptySpace';
 
 const Footer = props => {
-  const style = {
-    color: props.color || '#262626',
-    backgroundColor: '#fff'
+  const tableStyle = {
+    maxWidth: '640px',
+    width: '640px',
+    WebkitTextSizeAdjust: '100%',
+    msTextSizeAdjust: '100%',
+    msoTableLspace: '0pt',
+    msoTableRspace: '0pt',
+    borderCollapse: 'collapse',
+    margin: '0px auto',
   };
 
-  const spaceStyle = {
-    lineHeight: '1px',
-    fontSize: '1px'
+  const tdStyles = {
+    backgroundColor: '#fff',
+    fontFamily: '"Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif',
+    padding: '0 30px 35px 35px',
+    textAlign: 'center',
+    lineHeight: '16px',
+  };
+
+  const innerStyles = {
+    borderTop: '4px solid #111216',
+    color: '#111216',
+    fontSize: '12px',
+    textAlign: 'center',
+    paddingTop: '20px',
   };
 
   return (
-    <Table width="100%" style={style}>
+    <Table
+      width="100%"
+      style={{
+        WebkitTextSizeAdjust: '100%',
+        msTextSizeAdjust: '100%',
+        msoTableLspace: '0pt',
+        msoTableRspace: '0pt',
+        borderCollapse: 'collapse',
+        margin: '0px auto',
+        background: '#fff',
+      }}
+      border="0"
+      cellPadding="0"
+      cellSpacing="0"
+      align="center"
+      className="full"
+    >
       <TBody>
         <TR>
           <TD>
-            <EmptySpace height="20" />
-          </TD>
-          <TD>
-            <EmptySpace height="20" />
-          </TD>
-          <TD>
-            <EmptySpace height="20" />
-          </TD>
-          <TD>
-            <EmptySpace height="20" />
-          </TD>
-          <TD>
-            <EmptySpace height="20" />
-          </TD>
-        </TR>
-
-        {/* <TR>
-          <TD height="1" width="20" style={spaceStyle}>
-            &nbsp;
-          </TD>
-
-          <TD>
-            <Table width="270">
+            <Table
+              width="100%"
+              className="widthFull-"
+              className="body"
+              cellPadding="0"
+              cellSpacing="0"
+              border="0"
+              style={tableStyle}
+              width="640"
+            >
               <TBody>
                 <TR>
-                  <TD align="center" style={{ fontFamily: 'Arial' }}>
-                    <EmptySpace height="10" />
-
-                    <A
-                      style={{
-                        color: props.color,
-                        fontWeight: 'bold',
-                        textDecoration: 'none',
-                      }}
-                      href="https://example.com"
-                    >
-                      Our blog
-                    </A>
-
-                    <EmptySpace height="10" />
+                  <TD>
+                    <TD style={tdStyles} valign="top">
+                      <Table
+                        className="widthFull-"
+                        style={{
+                          WebkitTextSizeAdjust: '100%',
+                          msTextSizeAdjust: '100%',
+                          msoTableLspace: '0pt',
+                          msoTableRspace: '0pt',
+                          borderCollapse: 'collapse',
+                          margin: '0px auto',
+                        }}
+                        cellPadding="0"
+                        cellSpacing="0"
+                        border="0"
+                        width="100%"
+                      >
+                        <TBody>
+                          <TR>
+                            <TD style={innerStyles}>
+                              <div>
+                                This email was sent by: Narative 123 Rue Saint
+                                Laurent, Montreal, Canada
+                              </div>
+                            </TD>
+                          </TR>
+                        </TBody>
+                      </Table>
+                    </TD>
                   </TD>
                 </TR>
               </TBody>
             </Table>
-          </TD>
-
-          <TD height="1" width="20" style={spaceStyle}>
-            &nbsp;
-          </TD>
-
-          <TD>
-            <Table width="270">
-              <TBody>
-                <TR>
-                  <TD align="center" style={{ fontFamily: 'Arial' }}>
-                    <EmptySpace height="10" />
-
-                    <A
-                      style={{
-                        color: props.color,
-                        fontWeight: 'bold',
-                        textDecoration: 'none',
-                      }}
-                      href="https://example.com"
-                    >
-                      About us
-                    </A>
-
-                    <EmptySpace height="10" />
-                  </TD>
-                </TR>
-              </TBody>
-            </Table>
-          </TD> 
-          
-           <TD height="1" width="20" style={spaceStyle}>
-            &nbsp;
-          </TD>
-        </TR> */}
-
-        <TR>
-          <TD>
-            <EmptySpace height="20" />
-          </TD>
-          <TD>
-            <EmptySpace height="20" />
-          </TD>
-          <TD>
-            <EmptySpace height="20" />
-          </TD>
-          <TD>
-            <EmptySpace height="20" />
-          </TD>
-          <TD>
-            <EmptySpace height="20" />
           </TD>
         </TR>
       </TBody>

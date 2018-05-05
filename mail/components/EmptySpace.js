@@ -10,27 +10,24 @@ const EmptySpace = props => {
   const style = {
     lineHeight: `${props.height}px`,
     fontSize: '1px',
-    msoLineHeightRule: 'exactly'
+    msoLineHeightRule: 'exactly',
   };
 
   return (
-    <Table width="100%">
-      <TBody>
-        <TR>
-          <TD
-            width="100%"
-            height={`${props.height}px`}
-            style={style}
-            dangerouslySetInnerHTML={{ __html: '&nbsp;' }}
-          />
-        </TR>
-      </TBody>
+    <Table className="row" width="100%">
+      <TR>
+        <TD
+          height={`${props.height}px`}
+          style={style}
+          dangerouslySetInnerHTML={{ __html: '&nbsp;' }}
+        />
+      </TR>
     </Table>
   );
 };
 
 EmptySpace.defaultProps = {
-  height: '16'
+  height: '16',
 };
 
 export default EmptySpace;
