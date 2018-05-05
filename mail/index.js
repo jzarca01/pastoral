@@ -58,7 +58,7 @@ export function internalSendMail(options) {
     const internalText = htmlToText.fromString(internalHtml);
 
     const message = {
-      from: `${data.name} <${data.email}>`,
+      from: `Narative <system@narative.co>`,
       to: 'info@narative.co',
       subject,
       text: internalText,
