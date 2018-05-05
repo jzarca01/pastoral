@@ -9,7 +9,7 @@ import cors from 'cors';
 
 import routes from './routes';
 import utils from './utils/';
-// import { notFound, errorHandler } from './errors/handleErrors';
+import middleware from './middleware';
 
 dotenv.config();
 
@@ -17,7 +17,6 @@ const app = new express();
 app.use(cors());
 app.set('trust proxy', 1);
 
-// General server config such as cookies, body, favicon, public, session
 app.use(compression());
 app.use(morgan('dev'));
 app.use(cookieParser());
@@ -27,13 +26,8 @@ app.use(utils.securityHeaders);
 
 app.use('/api/', routes);
 
-// app.use(errorHandler);
+app.use(middleware.notFound);
 
-// start app
-app.listen(process.env.PORT, error => {
-  if (!error) {
-    console.log(`👋  Running on port ${process.env.PORT}`); // eslint-disable-line
-  }
-});
+app.listen(process.env.PORT, middleware.startup);
 
 export default app;
