@@ -7,7 +7,6 @@ import EmailRow from '../../components/EmailRow';
 
 export default ({ data }) => (
   <Layout>
-    <Header />
     <Body>
       <EmailRow width="100%" fontSize="32px" fontWeight="600">
         Hi, {data.name && data.name.split(' ')[0]}

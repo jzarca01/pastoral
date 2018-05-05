@@ -96,8 +96,7 @@ const Footer = props => {
                                 >
                                   Narative
                                 </a>{' '}
-                                · 123 Rue Saint Laurent, 5th floor, Montreal, QC
-                                H2W 1Y1
+                                · 4141 Avenue Papineau, Montréal, QC H2K 4K2
                               </div>
                               <Table
                                 width="100%"
