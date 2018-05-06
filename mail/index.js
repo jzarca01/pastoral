@@ -17,7 +17,7 @@ export function sendMail(options) {
    * an email to Narative's internal system for review.
    */
   if (internal) {
-    internalSendMail(options);
+    // internalSendMail(options);
   }
 
   const EmailTemplate = emails[template];
@@ -29,7 +29,7 @@ export function sendMail(options) {
   const text = htmlToText.fromString(html);
 
   const message = {
-    from: `Narative <info@narative.co>`,
+    from: `Narative <noreply@narative.co>`,
     to: data.email,
     subject,
     text,
