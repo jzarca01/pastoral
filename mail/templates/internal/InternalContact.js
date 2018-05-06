@@ -39,9 +39,9 @@ export default ({ data }) => (
       </EmailRow>
       <EmptySpace height={16} />
       <EmailRow>
-        <strong>What they need</strong>
+        <strong>The project type {data.name} needs</strong>
         <br />
-        {data.about || <span style={{ color: '#8e8e8e' }}>Not provided</span>}
+        {data.project || <span style={{ color: '#8e8e8e' }}>Not provided</span>}
       </EmailRow>
       <EmptySpace height={16} />
       <EmailRow>
