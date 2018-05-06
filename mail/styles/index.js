@@ -1261,13 +1261,16 @@ body.outlook p {
       text-decoration: none !important;
   }
 
+  .im { 
+    color: #111216 !important; 
+    } 
+
   @media screen and (max-width:699px) {
       .widthFull- {
           width: 100% !important;
       }
   }
 
-  
 `;
 
 export default styles;
