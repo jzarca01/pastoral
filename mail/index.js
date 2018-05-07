@@ -10,14 +10,14 @@ require('dotenv').config();
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export function sendMail(options) {
-  const { data, to, from, subject, template, internal } = options;
+  const { data, to, from, subject, template, internalCopy } = options;
 
   /**
    * If the email is flagged as internal: true then we'll also send
    * an email to Narative's internal system for review.
    */
-  if (internal) {
-    // internalSendMail(options);
+  if (internalCopy) {
+    internalSendMail(options);
   }
 
   const EmailTemplate = emails[template];

@@ -8,7 +8,7 @@ export const createContact = async (req, res) => {
       subject: 'Narative project submission',
       template: 'ExternalContact',
       data: req.body,
-      internal: true
+      internalCopy: true
     });
   } catch (err) {
     console.warn(err);
@@ -28,9 +28,11 @@ export const createContactPhone = async (req, res) => {
     // Sending an email back to the sender
     sendMail({
       subject: 'Narative phone call',
-      template: 'ExternalContactPhone',
-      data: req.body,
-      internal: true
+      template: 'InternalContactPhone',
+      data: {
+        phone: req.body.phone,
+        email: 'info@narative.co'
+      }
     });
   } catch (err) {
     return res.status(500).send({

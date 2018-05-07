@@ -10,7 +10,7 @@ import EmptySpace from '../../components/EmptySpace';
 export default ({ data }) => (
   <Layout>
     <Body>
-      <EmailRow width="100%" fontSize="32px" fontWeight="600">
+      <EmailRow width="100%" fontSize="24px" fontWeight="600">
         Hi, {data.name && data.name.split(' ')[0]}
       </EmailRow>
       <EmailRow>

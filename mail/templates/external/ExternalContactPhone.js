@@ -7,14 +7,13 @@ import EmailRow from '../../components/EmailRow';
 
 export default ({ data }) => (
   <Layout>
-    <Header />
     <Body>
-      <EmailRow width="100%" fontSize="32px" fontWeight="600">
-        Hi, {data.name && data.name.split(' ')[0]}
+      <EmailRow width="100%" fontSize="24px" fontWeight="600">
+        Hi,
       </EmailRow>
+      <EmailRow>Thank you for contacting Narative.</EmailRow>
       <EmailRow>
-        Thank you for contacting Narative. We have received your project
-        proposal and will get back to you within 24 hours.
+        We'll call you at <strong>{data.phone}</strong>.
       </EmailRow>
     </Body>
   </Layout>
