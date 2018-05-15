@@ -15,10 +15,8 @@ export default ({ data }) => (
       </EmailRow>
       <EmailRow>
         Thank you for contacting Narative. We have received your project
-        proposal and will get back to you within 24 hours (by{' '}
-        {dayjs()
-          .add(1, 'day')
-          .format('dddd, MMM M @ h:mm a')}).
+        proposal and will get back to you within 24 hours. If you don't hear
+        anything back don't hestitate to email us directly at info@narative.co.
       </EmailRow>
       <EmptySpace height={16} />
       <EmailRow width="100%" fontSize="24px" fontWeight="600">
