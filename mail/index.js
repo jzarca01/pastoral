@@ -40,31 +40,29 @@ export function sendMail(options) {
 }
 
 export function internalSendMail(options) {
-  const { data, to, from, subject, template, internal } = options;
+  const { data, to, from, subject, template } = options;
 
-  if (internal) {
-    const InternalEmailTemplate =
-      emails[template.replace('External', 'Internal')];
+  const InternalEmailTemplate =
+    emails[template.replace('External', 'Internal')];
 
-    const internalHtml = Oy.renderTemplate(
-      <InternalEmailTemplate data={data} />,
-      {
-        title: subject,
-        previewText: subject,
-        headCSS: styles
-      }
-    );
+  const internalHtml = Oy.renderTemplate(
+    <InternalEmailTemplate data={data} />,
+    {
+      title: subject,
+      previewText: subject,
+      headCSS: styles
+    }
+  );
 
-    const internalText = htmlToText.fromString(internalHtml);
+  const internalText = htmlToText.fromString(internalHtml);
 
-    const message = {
-      from: `Narative <system@narative.co>`,
-      to: 'dennis@narative.co',
-      subject,
-      text: internalText,
-      html: internalHtml
-    };
+  const message = {
+    from: `Narative <system@narative.co>`,
+    to: 'info@narative.co',
+    subject,
+    text: internalText,
+    html: internalHtml
+  };
 
-    return sgMail.send(message);
-  }
+  return sgMail.send(message);
 }
