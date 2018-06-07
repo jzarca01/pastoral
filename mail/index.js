@@ -39,6 +39,13 @@ export function sendMail(options) {
   return sgMail.send(message);
 }
 
+/**
+ * internalSendMail()
+ * Will send an email to Narative's internal contact email.
+ * to: 'contact@narative.co'
+ *
+ * @param {Object} options
+ */
 export function internalSendMail(options) {
   const { data, to, from, subject, template } = options;
 
@@ -58,7 +65,7 @@ export function internalSendMail(options) {
 
   const message = {
     from: `Narative <system@narative.co>`,
-    to: 'info@narative.co',
+    to: 'contact@narative.co',
     subject,
     text: internalText,
     html: internalHtml
