@@ -14,7 +14,8 @@ export default ({ data }) => (
       </EmailRow>
       <EmptySpace height={20} />
       <EmailRow>
-        We've received a phone call request! Please contact{' '}
+        We've received a phone call request in{' '}
+        <strong>{data.location.city}</strong>! Please contact{' '}
         <strong>
           <a href={`tel:+1${data.phone.replace(/\D/g, '')}`}>{data.phone}</a>
         </strong>

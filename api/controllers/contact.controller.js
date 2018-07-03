@@ -7,7 +7,7 @@ export const createContact = async (req, res) => {
     sendMail({
       subject: 'Narative project submission',
       template: 'ExternalContact',
-      data: req.body,
+      data: { ...req.body, location: req.location },
       internalCopy: true
     });
   } catch (err) {
@@ -31,7 +31,8 @@ export const createContactPhone = async (req, res) => {
       template: 'InternalContactPhone',
       data: {
         phone: req.body.phone,
-        email: 'info@narative.co'
+        email: 'info@narative.co',
+        location: req.location
       }
     });
   } catch (err) {
