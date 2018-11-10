@@ -4,6 +4,26 @@ import Footer from '../components/Footer';
 
 export default props => (
   <body leftmargin="0" topmargin="0" marginWidth="0" marginHeight="0">
+    <style
+      type="text/css"
+      dangerouslySetInnerHTML={{
+        __html: `
+        @import url("https://use.typekit.net/huf6cwu.css);
+
+        @font-face {
+          font-family:"futura-pt";
+          src:url("https://use.typekit.net/af/9b05f3/000000000000000000013365/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/9b05f3/000000000000000000013365/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/9b05f3/000000000000000000013365/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+          font-style:normal;font-weight:400;
+        }
+        
+        @font-face {
+          font-family:"futura-pt";
+          src:url("https://use.typekit.net/af/cf3e4e/000000000000000000010095/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/cf3e4e/000000000000000000010095/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/cf3e4e/000000000000000000010095/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+          font-style:italic;font-weight:400;
+        }
+    `
+      }}
+    />
     <Table
       width="100%"
       style={{
@@ -49,15 +69,6 @@ export default props => (
           </TD>
         </TR>
         <Footer />
-        <TR>
-          <TD>
-            <img
-              src="https://narative.co/tracker"
-              height="1"
-              style={{ display: 'block', height: '1px', width: '1px' }}
-            />
-          </TD>
-        </TR>
       </TBody>
     </Table>
   </body>

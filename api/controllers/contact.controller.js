@@ -5,7 +5,7 @@ export const createContact = async (req, res) => {
   try {
     // Sending an email back to the sender
     sendMail({
-      subject: 'Narative project submission',
+      subject: "Let's make something great",
       template: 'ExternalContact',
       data: { ...req.body, location: req.location },
       internalCopy: true
