@@ -81,7 +81,7 @@ export function sendInternalMail(options) {
 
   const message = {
     from: `Narative <system@narative.co>`,
-    to: 'info@narative.co',
+    to: 'contact@narative.co',
     subject,
     text: internalText,
     html: internalHtml
