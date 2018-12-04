@@ -4,12 +4,14 @@ export default props => {
   const rowStyles = {
     lineHeight: '1.6',
     margin: props.margin || '0',
-    fontSize: props.fontSize || '16px',
-    fontWeight: props.fontWeight || 'regular'
+    fontSize: props.fontSize || '18px',
+    color: props.color || '#72777b',
+    fontWeight: props.fontWeight || 'regular',
+    width: props.width || '100%'
   };
 
   return (
-    <div width="100%" style={rowStyles}>
+    <div width={props.width || '100%'} style={rowStyles}>
       {props.children}
     </div>
   );

@@ -1,45 +1,65 @@
 import React from 'react';
-import dayjs from 'dayjs';
 import Layout from '../../layouts/Layout';
-import Header from '../../components/Header';
 import Body from '../../components/Body';
-import EmailButton from '../../components/EmailButton';
 import EmailRow from '../../components/EmailRow';
 import EmptySpace from '../../components/EmptySpace';
+
+const EMAIL_WIDTH = '430px';
 
 export default ({ data }) => (
   <Layout>
     <Body>
-      <EmailRow width="100%" fontSize="24px" fontWeight="600">
+      <EmailRow width="100%" fontWeight="300" fontSize="20px">
         Hi, {data.name && data.name.split(' ')[0]}
       </EmailRow>
-      <EmailRow>
-        Thank you for contacting Narative. We have received your project
-        proposal and will get back to you within 24 hours. If you don't hear
-        anything back don't hestitate to email us directly at info@narative.co.
+      <EmptySpace height={30} />
+      <EmailRow width={EMAIL_WIDTH}>
+        I’m Mack Mansouri, co-founder and head of growth here at Narative.
       </EmailRow>
-      <EmptySpace height={16} />
-      <EmailRow width="100%" fontSize="24px" fontWeight="600">
-        Your project request
+      <EmptySpace height={20} />
+      <EmailRow width={EMAIL_WIDTH}>
+        Thanks for sending over more info about your project. I’ll review
+        everything and be in touch within the next business day.
       </EmailRow>
-      <EmailRow>
-        <strong>Size of company</strong>
-        <br />
-        {data.companySize || (
-          <span style={{ color: '#8e8e8e' }}>Not provided</span>
-        )}
+      <EmptySpace height={20} />
+      <EmailRow width={EMAIL_WIDTH}>
+        Before we talk more, I wanted to let you know a bit about what to expect
+        from working with us. A typical engagement with Narative lasts between
+        14 to 20 weeks and starts at around $350,000 USD.
       </EmailRow>
-      <EmptySpace height={16} />
-      <EmailRow>
-        <strong>About your project</strong>
-        <br />
-        {data.project || <span style={{ color: '#8e8e8e' }}>Not provided</span>}
+      <EmptySpace height={20} />
+      <EmailRow width={EMAIL_WIDTH}>
+        During that time, we get to know yourself, your team and your product to
+        fully understand every problem and opportunity. Then we get to work
+        creating high-quality products designed to deliver a significant ROI.
       </EmailRow>
-      <EmptySpace height={16} />
-      <EmailRow>
-        <strong>The details</strong>
-        <br />
-        {data.details || <span style={{ color: '#8e8e8e' }}>Not provided</span>}
+      <EmptySpace height={20} />
+      <EmailRow width={EMAIL_WIDTH}>
+        I’ve attached a short deck that explains more about our values,
+        experience and areas of expertise. If you'd like to add anything more
+        before our first call, please don't hesitate to reply to this message.
+      </EmailRow>
+      <EmptySpace height={30} />
+      <EmailRow width={EMAIL_WIDTH} lineHeight={1.4}>
+        <div
+          style={{
+            display: 'inline-block',
+            marginRight: '20px',
+            position: 'relative',
+            top: '3px'
+          }}
+        >
+          <img
+            src="https://res.cloudinary.com/narative/image/upload/v1543882110/mack-email-sig.png"
+            width="48px"
+            height="48px"
+            alt="Narative Mack"
+          />
+        </div>
+        <div style={{ display: 'inline-block' }}>
+          Talk soon, <br />
+          Mack
+        </div>
       </EmailRow>
     </Body>
   </Layout>

@@ -2,14 +2,16 @@ import React from 'react';
 import { Table, TBody, TR, TD } from 'oy-vey';
 
 import EmptySpace from './EmptySpace';
+import Header from './Header';
 
 export default props => {
   const textStyle = {
     backgroundColor: '#fff',
-    fontFamily:
-      '"futura-pt","Roboto","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif',
+    fontFamily: 'futura-pt,Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif',
+    fontWeight: '300',
+    color: '#72777b',
     fontSize: '18px',
-    padding: '30px 30px 35px 35px'
+    padding: '20px 35px 20px 35px'
   };
 
   return (
@@ -24,9 +26,11 @@ export default props => {
       <TBody>
         <TR>
           <TD valign="top" style={textStyle}>
-            <EmptySpace height={10} />
+            <EmptySpace height={50} />
+            <Header />
+            <EmptySpace height={80} />
             {props.children}
-            <EmptySpace height={30} />
+            <EmptySpace height={70} />
           </TD>
         </TR>
       </TBody>

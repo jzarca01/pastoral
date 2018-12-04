@@ -15,7 +15,8 @@ export default ({ data }) => (
       </EmailRow>
       <EmptySpace height={10} />
       <EmailRow>
-        We've received a project proposal from <strong>{data.name}</strong>.<br />
+        We've received a project proposal from <strong>{data.name}</strong> in{' '}
+        <strong>{data.location.city}</strong>.<br />
         They are expecting a response by{' '}
         <strong>
           {dayjs()

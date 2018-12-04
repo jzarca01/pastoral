@@ -3,12 +3,24 @@ import { sendMail } from '../../mail';
 
 export const createContact = async (req, res) => {
   try {
+    const firstName = (req.body.name && req.body.name.split(' ')[0]) || '';
+
     // Sending an email back to the sender
     sendMail({
-      subject: 'Narative project submission',
       template: 'ExternalContact',
-      data: req.body,
-      internalCopy: true
+      internal: true,
+      from: `Mack <mack@narative.co>`,
+      to: req.body.email,
+      subject: 'Next steps',
+      previewText: `Hi${' ' + firstName}, Let's make something great!`,
+      data: { ...req.body, location: req.location },
+      attachments: [
+        {
+          path: './attachments/pdfs/Narative-Welcome.pdf',
+          name: 'Narative-Welcome.pdf',
+          type: 'application/pdf'
+        }
+      ]
     });
   } catch (err) {
     console.warn(err);
@@ -31,7 +43,8 @@ export const createContactPhone = async (req, res) => {
       template: 'InternalContactPhone',
       data: {
         phone: req.body.phone,
-        email: 'info@narative.co'
+        email: 'info@narative.co',
+        location: req.location
       }
     });
   } catch (err) {
