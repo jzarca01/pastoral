@@ -79,6 +79,7 @@ export function sendInternalMail(options) {
 
   const internalText = htmlToText.fromString(internalHtml);
 
+  // contact@narative.co integrates into Slack
   const message = {
     from: `Narative <system@narative.co>`,
     to: 'contact@narative.co',
