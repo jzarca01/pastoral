@@ -4,6 +4,91 @@ import Footer from '../components/Footer';
 
 export default props => (
   <body leftmargin="0" topmargin="0" marginWidth="0" marginHeight="0">
+    <span
+      className="preheader"
+      styles={{
+        color: 'transparent',
+        display: 'none',
+        height: 0,
+        maxHeight: 0,
+        maxWidth: 0,
+        opacity: 0,
+        overflow: 'hidden',
+        msoHide: 'all',
+        visibility: 'hidden',
+        width: 0
+      }}
+    >
+      {props.previewText}
+    </span>
+    <span
+      styles={{
+        color: 'transparent',
+        display: 'none',
+        height: 0,
+        maxHeight: 0,
+        maxWidth: 0,
+        opacity: 0,
+        overflow: 'hidden',
+        msoHide: 'all',
+        visibility: 'hidden',
+        width: 0
+      }}
+    >
+      &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </span>
+    <span
+      styles={{
+        color: 'transparent',
+        display: 'none',
+        height: 0,
+        maxHeight: 0,
+        maxWidth: 0,
+        opacity: 0,
+        overflow: 'hidden',
+        msoHide: 'all',
+        visibility: 'hidden',
+        width: 0
+      }}
+    >
+      &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </span>
+    <span
+      styles={{
+        color: 'transparent',
+        display: 'none',
+        height: 0,
+        maxHeight: 0,
+        maxWidth: 0,
+        opacity: 0,
+        overflow: 'hidden',
+        msoHide: 'all',
+        visibility: 'hidden',
+        width: 0
+      }}
+    >
+      &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </span>
+    <span
+      styles={{
+        color: 'transparent',
+        display: 'none',
+        height: 0,
+        maxHeight: 0,
+        maxWidth: 0,
+        opacity: 0,
+        overflow: 'hidden',
+        msoHide: 'all',
+        visibility: 'hidden',
+        width: 0
+      }}
+    >
+      &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </span>
     <style
       type="text/css"
       dangerouslySetInnerHTML={{

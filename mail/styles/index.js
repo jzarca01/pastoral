@@ -187,9 +187,6 @@ a {
 
 
 @media only screen and (max-width: 596px) {
-  table.body img {
-    width: auto;
-    height: auto; }
   table.body center {
     min-width: 0 !important; }
   table.body .container {
@@ -215,6 +212,10 @@ a {
   td {
       -webkit-text-size-adjust: none;
       -ms-text-size-adjust: none;
+  }
+
+  div, p, li, td {
+    font-size: 24px !important;
   }
 
   img {
@@ -272,13 +273,8 @@ a {
     color: #111216 !important; 
     } 
 
-  @media screen and (max-width:699px) {
-    color: #111216; !important;
-    font-size: 18px !important;
-    
-      .widthFull- {
-          width: 100% !important;
-      }
+  @media screen and (max-width: 768px) {
+
   }
 
 `;

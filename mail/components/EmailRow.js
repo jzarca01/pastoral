@@ -5,7 +5,7 @@ export default props => {
     lineHeight: '1.6',
     margin: props.margin || '0',
     fontSize: props.fontSize || '18px',
-    color: props.color || '#7A8085',
+    color: props.color || '#72777b',
     fontWeight: props.fontWeight || 'regular',
     width: props.width || '100%'
   };

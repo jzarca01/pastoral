@@ -2,7 +2,6 @@ import React from 'react';
 import { Table, TBody, TR, TD } from 'oy-vey';
 
 import EmptySpace from './EmptySpace';
-import Footer from './Footer';
 import Header from './Header';
 
 export default props => {
@@ -10,7 +9,7 @@ export default props => {
     backgroundColor: '#fff',
     fontFamily: 'futura-pt,Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif',
     fontWeight: '300',
-    color: '#7A8085',
+    color: '#72777b',
     fontSize: '18px',
     padding: '20px 35px 20px 35px'
   };
@@ -27,7 +26,7 @@ export default props => {
       <TBody>
         <TR>
           <TD valign="top" style={textStyle}>
-            <EmptySpace height={70} />
+            <EmptySpace height={50} />
             <Header />
             <EmptySpace height={80} />
             {props.children}
