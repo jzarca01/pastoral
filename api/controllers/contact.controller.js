@@ -3,21 +3,21 @@ import { sendMail } from '../../mail';
 
 export const createContact = async (req, res) => {
   try {
-    const firstName = req.body.namename && req.body.namename.split(' ')[0];
+    const firstName = (req.body.name && req.body.name.split(' ')[0]) || '';
 
     // Sending an email back to the sender
     sendMail({
       template: 'ExternalContact',
       internal: true,
       from: `Mack <mack@narative.co>`,
-      to: 'dennis@narative.co',
+      to: req.body.email,
       subject: 'Next steps',
       previewText: `Hi${' ' + firstName}, Let's make something great!`,
       data: { ...req.body, location: req.location },
       attachments: [
         {
-          path: './attachments/pdfs/sample.pdf',
-          name: 'sample.pdf',
+          path: './attachments/pdfs/Narative-Welcome.pdf',
+          name: 'Narative-Welcome.pdf',
           type: 'application/pdf'
         }
       ]

@@ -63,7 +63,7 @@ export async function sendMail(options) {
  * @param {Object} options
  */
 export function sendInternalMail(options) {
-  const { data, to, from, subject, template } = options;
+  const { data, subject, template } = options;
 
   const InternalEmailTemplate =
     emails[template.replace('External', 'Internal')];
