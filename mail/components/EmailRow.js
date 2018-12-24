@@ -5,14 +5,17 @@ export default props => {
     lineHeight: '1.6',
     margin: props.margin || '0',
     fontSize: props.fontSize || '18px',
-    color: props.color || '#72777b',
+    color: props.color || '#525556',
     fontWeight: props.fontWeight || 'regular',
-    width: props.width || '100%'
+    width: props.width || '100%',
+    wordBreak: 'break-word',
+    WebkitTextSizeAdjust: '100%',
+    msTextSizeAdjust: '100%'
   };
 
   return (
-    <div width={props.width || '100%'} style={rowStyles}>
+    <p width={props.width || '100%'} style={rowStyles} className="email-row">
       {props.children}
-    </div>
+    </p>
   );
 };

@@ -1,22 +1,11 @@
 import React from 'react';
-import { Table, TBody, TR, TD, A } from 'oy-vey';
+import { Table, TBody, TR, TD } from 'oy-vey';
 
 import EmptySpace from './EmptySpace';
 
 const Footer = props => {
-  const tableStyle = {
-    maxWidth: '600px',
-    width: '530px',
-    WebkitTextSizeAdjust: '100%',
-    msTextSizeAdjust: '100%',
-    msoTableLspace: '0pt',
-    msoTableRspace: '0pt',
-    borderCollapse: 'collapse',
-    margin: '0px auto'
-  };
-
   const innerStyles = {
-    padding: '0 30px 35px 35px'
+    padding: '0 18px 35px 18px'
   };
 
   return (
@@ -29,8 +18,11 @@ const Footer = props => {
         msoTableRspace: '0pt',
         borderCollapse: 'collapse',
         margin: '0px auto',
-        background: '#fff'
+        background: '#fff',
+        minWidth: '100%',
+        maxWidth: '600px'
       }}
+      width="100%"
       border="0"
       cellPadding="0"
       cellSpacing="0"
@@ -40,23 +32,22 @@ const Footer = props => {
         <TR>
           <TD valign="top">
             <Table
-              className="widthFull-"
               style={{
                 WebkitTextSizeAdjust: '100%',
                 msTextSizeAdjust: '100%',
                 msoTableLspace: '0pt',
                 msoTableRspace: '0pt',
                 borderCollapse: 'collapse',
-                margin: '0px auto'
+                margin: '0px auto',
+                minWidth: '100%'
               }}
               cellPadding="0"
               cellSpacing="0"
               border="0"
-              width="600"
             >
               <TBody>
                 <TR>
-                  <TD style={innerStyles}>
+                  <TD style={innerStyles} className="rowTextContent">
                     <div
                       style={{ marginRight: '35px', display: 'inline-block' }}
                     >
@@ -67,8 +58,10 @@ const Footer = props => {
                       >
                         <img
                           src="https://res.cloudinary.com/narative/image/upload/v1541875938/Facebook.png"
-                          height="15px"
-                          alt="Narative logo"
+                          width="11"
+                          height="15"
+                          alt="Facebook logo"
+                          style={{ maxWidth: '10px' }}
                         />
                       </a>
                     </div>
@@ -82,8 +75,10 @@ const Footer = props => {
                       >
                         <img
                           src="https://res.cloudinary.com/narative/image/upload/v1541875938/Twitter.png"
-                          height="14px"
-                          alt="Narative logo"
+                          width="11"
+                          height="14"
+                          alt="Twitter logo"
+                          style={{ maxWidth: '20px' }}
                         />
                       </a>
                     </div>
@@ -97,8 +92,10 @@ const Footer = props => {
                       >
                         <img
                           src="https://res.cloudinary.com/narative/image/upload/v1541875938/Instagram.png"
-                          height="15px"
-                          alt="Narative logo"
+                          width="11"
+                          height="15"
+                          alt="Instagram logo"
+                          style={{ maxWidth: '20px' }}
                         />
                       </a>
                     </div>
@@ -112,8 +109,10 @@ const Footer = props => {
                       >
                         <img
                           src="https://res.cloudinary.com/narative/image/upload/v1541875938/LinkedIn.png"
-                          height="15px"
-                          alt="Narative logo"
+                          width="11"
+                          height="15"
+                          alt="LinkedIn logo"
+                          style={{ maxWidth: '20px' }}
                         />
                       </a>
                     </div>
@@ -125,8 +124,10 @@ const Footer = props => {
                       >
                         <img
                           src="https://res.cloudinary.com/narative/image/upload/v1541875938/Medium.png"
-                          height="13px"
-                          alt="Narative logo"
+                          width="11"
+                          height="13"
+                          alt="Medium logo"
+                          style={{ maxWidth: '20px' }}
                         />
                       </a>
                     </div>

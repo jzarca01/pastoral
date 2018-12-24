@@ -3,7 +3,6 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import compression from 'compression';
 import morgan from 'morgan';
-import path from 'path';
 import dotenv from 'dotenv';
 import cors from 'cors';
 

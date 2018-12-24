@@ -23,7 +23,7 @@ export default props => {
 
   return (
     <div width="100%">
-      <a href={props.link} style={buttonStyle}>
+      <a href={props.link} style={buttonStyle} className="email-button">
         {props.text}
       </a>
     </div>

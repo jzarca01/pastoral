@@ -9,28 +9,35 @@ export default props => {
     backgroundColor: '#fff',
     fontFamily: 'futura-pt,Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif',
     fontWeight: '300',
-    color: '#72777b',
+    color: '#525556',
     fontSize: '18px',
-    padding: '20px 35px 20px 35px'
+    padding: '20px 18px 20px 18px',
+    WebkitTextSizeAdjust: '100%',
+    msTextSizeAdjust: '100%'
   };
 
   return (
     <Table
-      className="widthFull-"
       width="100%"
       className="body"
       cellPadding="0"
       cellSpacing="0"
       border="0"
+      style={{
+        WebkitTextSizeAdjust: '100%',
+        msTextSizeAdjust: '100%',
+        maxWidth: '600px'
+      }}
+      width="100%"
     >
       <TBody>
         <TR>
-          <TD valign="top" style={textStyle}>
-            <EmptySpace height={50} />
+          <TD valign="top" className="rowContent" style={textStyle}>
+            <EmptySpace height={30} />
             <Header />
-            <EmptySpace height={80} />
+            <EmptySpace height={60} />
             {props.children}
-            <EmptySpace height={70} />
+            <EmptySpace height={30} />
           </TD>
         </TR>
       </TBody>

@@ -6,7 +6,8 @@
   "scripts": {
     "babel-node": "babel-node",
     "dev": "cross-env NODE_ENV=development cross-env PORT=8080 nodemon --exec yarn babel-node -- ./bin/api.js",
-    "start": "cross-env NODE_ENV=production cross-env PORT=8080 babel-node ./bin/api.js"
+    "start": "cross-env NODE_ENV=production cross-env PORT=8080 babel-node ./bin/api.js",
+    "deploy": "git push heroku master"
   },
   "repository": {
     "type": "git",

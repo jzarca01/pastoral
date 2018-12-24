@@ -6,6 +6,7 @@ import Oy from 'oy-vey';
 import htmlToText from 'html-to-text';
 
 import emails from './templates';
+import generateCustomTemplate from './custom/generateCustomTemplate';
 import styles from './styles';
 
 const sgMail = require('@sendgrid/mail');
@@ -15,9 +16,18 @@ require('dotenv').config();
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export async function sendMail(options) {
+  // No need to send emails if they're disabled
+  if (
+    process.env.NODE_ENV === 'developement' &&
+    process.env.EMAILS === 'disabled'
+  ) {
+    return console.log(`Sent ${template}. Emails disabled in development.`);
+  }
+
   const {
     attachments,
     data,
+    external = true,
     internal,
     from,
     previewText,
@@ -27,11 +37,15 @@ export async function sendMail(options) {
   } = options;
 
   const EmailTemplate = emails[template];
-  const html = Oy.renderTemplate(<EmailTemplate data={data} />, {
-    title: subject,
-    previewText,
-    headCSS: styles
-  });
+  const html = Oy.renderTemplate(
+    <EmailTemplate data={data} />,
+    {
+      title: subject,
+      previewText,
+      headCSS: styles
+    },
+    templateOptions => generateCustomTemplate(templateOptions)
+  );
 
   const message = {
     from,
@@ -52,7 +66,10 @@ export async function sendMail(options) {
     sendInternalMail(options);
   }
 
-  return sgMail.send(message);
+  // Default is to always send the external copy
+  if (external) {
+    return sgMail.send(message);
+  }
 }
 
 /**

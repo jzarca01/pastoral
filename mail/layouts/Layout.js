@@ -3,10 +3,10 @@ import { Table, TBody, TR, TD } from 'oy-vey';
 import Footer from '../components/Footer';
 
 export default props => (
-  <body leftmargin="0" topmargin="0" marginWidth="0" marginHeight="0">
+  <React.Fragment>
     <span
       className="preheader"
-      styles={{
+      style={{
         color: 'transparent',
         display: 'none',
         height: 0,
@@ -22,7 +22,7 @@ export default props => (
       {props.previewText}
     </span>
     <span
-      styles={{
+      style={{
         color: 'transparent',
         display: 'none',
         height: 0,
@@ -39,7 +39,7 @@ export default props => (
       &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
     </span>
     <span
-      styles={{
+      style={{
         color: 'transparent',
         display: 'none',
         height: 0,
@@ -56,7 +56,7 @@ export default props => (
       &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
     </span>
     <span
-      styles={{
+      style={{
         color: 'transparent',
         display: 'none',
         height: 0,
@@ -73,7 +73,7 @@ export default props => (
       &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
     </span>
     <span
-      styles={{
+      style={{
         color: 'transparent',
         display: 'none',
         height: 0,
@@ -89,26 +89,6 @@ export default props => (
       &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
       &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
     </span>
-    <style
-      type="text/css"
-      dangerouslySetInnerHTML={{
-        __html: `
-        @import url("https://use.typekit.net/huf6cwu.css);
-
-        @font-face {
-          font-family:"futura-pt";
-          src:url("https://use.typekit.net/af/9b05f3/000000000000000000013365/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/9b05f3/000000000000000000013365/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/9b05f3/000000000000000000013365/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
-          font-style:normal;font-weight:400;
-        }
-        
-        @font-face {
-          font-family:"futura-pt";
-          src:url("https://use.typekit.net/af/cf3e4e/000000000000000000010095/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/cf3e4e/000000000000000000010095/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/cf3e4e/000000000000000000010095/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
-          font-style:italic;font-weight:400;
-        }
-    `
-      }}
-    />
     <Table
       width="100%"
       style={{
@@ -118,7 +98,8 @@ export default props => (
         msoTableRspace: '0pt',
         borderCollapse: 'collapse',
         margin: '0px auto',
-        background: '#fff'
+        background: '#fff',
+        maxWidth: '600px'
       }}
       border="0"
       cellPadding="0"
@@ -130,7 +111,6 @@ export default props => (
         <TR>
           <TD>
             <Table
-              className="widthFull-"
               style={{
                 WebkitTextSizeAdjust: '100%',
                 msTextSizeAdjust: '100%',
@@ -140,14 +120,16 @@ export default props => (
                 margin: '0px auto',
                 maxWidth: '600px'
               }}
-              width="600"
+              width="100%"
               cellPadding="0"
               cellSpacing="0"
               border="0"
             >
               <TBody>
                 <TR>
-                  <TD>{props.children}</TD>
+                  <TD align="left" width="100%">
+                    {props.children}
+                  </TD>
                 </TR>
               </TBody>
             </Table>
@@ -156,5 +138,5 @@ export default props => (
         <Footer />
       </TBody>
     </Table>
-  </body>
+  </React.Fragment>
 );
