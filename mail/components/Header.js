@@ -41,6 +41,7 @@ const Header = props => (
                 width="28px"
                 height="38px"
                 alt="Narative logo"
+                style={{ maxWidth: '28px' }}
               />
             </a>
           </EmailRow>

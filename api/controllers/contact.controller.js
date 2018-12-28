@@ -8,7 +8,7 @@ export const createContact = async (req, res) => {
     // Sending an email back to the sender
     sendMail({
       template: 'ExternalContact',
-      internal: true,
+      // internal: true,
       from: `Mack <mack@narative.co>`,
       to: req.body.email,
       subject: 'Next steps',

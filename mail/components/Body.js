@@ -9,7 +9,7 @@ export default props => {
     backgroundColor: '#fff',
     fontFamily: 'futura-pt,Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif',
     fontWeight: '300',
-    color: '#525556',
+    color: '#111216',
     fontSize: '18px',
     padding: '20px 18px 20px 18px',
     WebkitTextSizeAdjust: '100%',
@@ -33,11 +33,11 @@ export default props => {
       <TBody>
         <TR>
           <TD valign="top" className="rowContent" style={textStyle}>
-            <EmptySpace height={30} />
+            <EmptySpace height={50} />
             <Header />
             <EmptySpace height={60} />
             {props.children}
-            <EmptySpace height={30} />
+            <EmptySpace height={70} />
           </TD>
         </TR>
       </TBody>

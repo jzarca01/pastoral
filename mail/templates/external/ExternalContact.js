@@ -4,12 +4,12 @@ import Body from '../../components/Body';
 import EmailRow from '../../components/EmailRow';
 import EmptySpace from '../../components/EmptySpace';
 
-const EMAIL_WIDTH = '430px';
+const EMAIL_WIDTH = '100%';
 
 export default ({ data }) => (
   <Layout>
     <Body>
-      <EmailRow width="100%" fontWeight="300" fontSize="20px">
+      <EmailRow width="100%">
         Hi, {data.name && data.name.split(' ')[0]}
       </EmailRow>
       <EmptySpace height={30} />
@@ -44,21 +44,25 @@ export default ({ data }) => (
         <div
           style={{
             display: 'inline-block',
-            marginRight: '20px',
-            position: 'relative',
-            top: '3px'
+            marginRight: '20px'
           }}
         >
           <img
             src="https://res.cloudinary.com/narative/image/upload/v1543882110/mack-email-sig.png"
-            width="48px"
-            height="48px"
+            width="41px"
+            height="41px"
             alt="Narative Mack"
+            style={{ maxWidth: '41px' }}
           />
         </div>
         <div style={{ display: 'inline-block' }}>
-          Talk soon, <br />
-          Mack
+          <p
+            style={{ fontWeight: '300', marginBottom: '3px' }}
+            className="email-row"
+          >
+            Talk soon, <br />
+            Mack
+          </p>
         </div>
       </EmailRow>
     </Body>
