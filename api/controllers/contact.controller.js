@@ -41,6 +41,9 @@ export const createContactPhone = async (req, res) => {
     sendMail({
       subject: 'Narative phone call',
       template: 'InternalContactPhone',
+      internal: true,
+      external: false,
+      previewText: `Internal email`,
       data: {
         phone: req.body.phone,
         email: 'info@narative.co',

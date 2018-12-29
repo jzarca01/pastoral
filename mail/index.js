@@ -80,7 +80,7 @@ export async function sendMail(options) {
  * @param {Object} options
  */
 export function sendInternalMail(options) {
-  const { data, subject, template } = options;
+  const { data, previewText = 'Internal email', subject, template } = options;
 
   const InternalEmailTemplate =
     emails[template.replace('External', 'Internal')];
@@ -89,9 +89,10 @@ export function sendInternalMail(options) {
     <InternalEmailTemplate data={data} />,
     {
       title: subject,
-      previewText: subject,
+      previewText,
       headCSS: styles
-    }
+    },
+    templateOptions => generateCustomTemplate(templateOptions)
   );
 
   const internalText = htmlToText.fromString(internalHtml);
