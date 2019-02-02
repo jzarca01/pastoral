@@ -14,30 +14,32 @@ export default ({ data }) => (
       </EmailRow>
       <EmptySpace height={30} />
       <EmailRow width={EMAIL_WIDTH}>
-        I’m Mack Mansouri, co-founder and head of growth here at Narative.
+        I'm Mack, co-founder and COO here at Narative. Thank you for considering
+        us for your next project.
       </EmailRow>
       <EmptySpace height={20} />
       <EmailRow width={EMAIL_WIDTH}>
-        Thanks for sending over more info about your project. I’ll review
-        everything and be in touch within the next business day.
+        We're reviewing everything you sent over and will reply within one
+        business day. Before we talk more, I wanted to let you know a bit more
+        about our approach to client partnerships.
       </EmailRow>
       <EmptySpace height={20} />
       <EmailRow width={EMAIL_WIDTH}>
-        Before we talk more, I wanted to let you know a bit about what to expect
-        from working with us. A typical engagement with Narative lasts between
-        14 to 20 weeks and starts at around $350,000 USD.
+        We believe in taking the time to get to know yourself, your team and
+        your company to create products that truly help you hit the business
+        goals you're aiming for. That's why we typically partner with clients
+        for a period of 14–20 weeks, dedicating our entire team to each project
+        to ensure its success.
       </EmailRow>
       <EmptySpace height={20} />
       <EmailRow width={EMAIL_WIDTH}>
-        During that time, we get to know yourself, your team and your product to
-        fully understand every problem and opportunity. Then we get to work
-        creating high-quality products designed to deliver a significant ROI.
+        I’ve attached a short deck that explains more about what we do and how
+        we can help.
       </EmailRow>
       <EmptySpace height={20} />
       <EmailRow width={EMAIL_WIDTH}>
-        I’ve attached a short deck that explains more about our values,
-        experience and areas of expertise. If you'd like to add anything more
-        before our first call, please don't hesitate to reply to this message.
+        If you have any questions or more details you'd like to add, please
+        don't hesitate to reply.
       </EmailRow>
       <EmptySpace height={30} />
       <EmailRow width={EMAIL_WIDTH} lineHeight={1.4}>
